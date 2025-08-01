@@ -59,7 +59,7 @@ const Contact = () => {
                   </div>
                   <Card.Title className="contact-title">Email Us</Card.Title>
                   <Card.Text className="contact-text">
-                  bonaventex001@gmail.com<br />
+                    bonaventex001@gmail.com<br />
                     support@marriageshapers.org
                   </Card.Text>
                   <a 
