@@ -67,14 +67,14 @@
     padding-left: 15px;
   }
   
-  .footer-links a::before {
+  /* .footer-links a::before {
     content: '\u203a';
     position: absolute;
     left: 0;
     color: var(--primary-color);
     transition: var(--transition-base);
   }
-  
+   */
   .footer-links a:hover {
     color: var(--primary-color);
     padding-left: 20px;
