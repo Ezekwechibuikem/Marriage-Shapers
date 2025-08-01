@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -19,14 +18,14 @@ import BlogCard from '../../common/BlogCard';
 import EventCard from '../../common/EventCard';
 
 import './Home.css';
+import aboutImage from '../../../assets/images/MarriageShapers.jpg';
+import blogImage2 from '../../../assets/images/blogs/blogimage2.jpg';
 
 // Placeholder images (in a real project, these would be imported from assets)
 const heroImage = 'https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80';
-const aboutImage = 'https://images.unsplash.com/photo-1529634667544-dc1ee6cb3e16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80';
 const testimonialImage1 = 'https://randomuser.me/api/portraits/women/44.jpg';
 const testimonialImage2 = 'https://randomuser.me/api/portraits/men/32.jpg';
 const blogImage1 = 'https://images.unsplash.com/photo-1511405889574-b01de1da5441?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80';
-const blogImage2 = 'https://images.unsplash.com/photo-1469571486292-b53601010376?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80';
 const eventImage = 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80';
 
 const Home = () => {
@@ -197,7 +196,7 @@ const Home = () => {
                 Take the first step toward a healthier, more fulfilling relationship based on biblical principles.
               </p>
               <div className="cta-buttons">
-                <Button as={Link} to="/contact" variant="primary" size="lg" className="me-3 mb-3">
+                <Button as={Link} to="/contact" variant="outline-light" size="lg" className="me-3 mb-3">
                   Book a Session
                 </Button>
                 <Button as={Link} to="/services" variant="outline-light" size="lg" className="mb-3">
@@ -217,7 +216,7 @@ const Home = () => {
             subtitle="Hear from couples and individuals who have been impacted by our programs."
           />
           
-          <Row>
+          <Row className="align-items-stretch">
             {testimonials.map((testimonial, index) => (
               <Col lg={6} className="mb-4" key={index}>
                 <Testimonial
@@ -225,7 +224,7 @@ const Home = () => {
                   name={testimonial.name}
                   role={testimonial.role}
                   image={testimonial.image}
-                  rating={testimonial.rating}
+                  // rating={testimonial.rating}
                 />
               </Col>
             ))}

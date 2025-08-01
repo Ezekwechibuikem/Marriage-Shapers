@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,28 +9,19 @@ const Testimonial = ({
   name, 
   role, 
   image,
-  rating = 5
+  // rating = 5
 }) => {
   return (
-    <Card className="testimonial-card">
-      <Card.Body>
+    <Card className="testimonial-card h-100 d-flex flex-column">
+      <Card.Body className="d-flex flex-column">
         <div className="testimonial-icon">
           <FontAwesomeIcon icon={faQuoteLeft} />
         </div>
-        <Card.Text className="testimonial-quote">
+
+        <Card.Text className="testimonial-quote flex-grow-1">
           {quote}
         </Card.Text>
-        <div className="testimonial-rating">
-          {[...Array(5)].map((_, i) => (
-            <span 
-              key={i} 
-              className={`star ${i < rating ? 'filled' : ''}`}
-            >
-              \u2605
-            </span>
-          ))}
-        </div>
-        <div className="testimonial-author">
+        <div className="testimonial-author mt-auto">
           {image && (
             <div className="testimonial-image">
               <img src={image} alt={name} />
