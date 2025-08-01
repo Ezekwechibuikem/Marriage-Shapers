@@ -12,7 +12,7 @@ import ContactForm from '../../common/ContactForm';
 import './FAQ.css';
 
 // Placeholder image (in a real project, this would be imported from assets)
-const heroImage = 'https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80';
+import heroImage from '../../../assets/images/faq/faqimage.avif';
 
 const FAQ = () => {
   // FAQ categories
