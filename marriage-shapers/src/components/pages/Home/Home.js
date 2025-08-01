@@ -198,7 +198,7 @@ const Home = () => {
                 Take the first step toward a healthier, more fulfilling relationship based on biblical principles.
               </p>
               <div className="cta-buttons">
-                <Button as={Link} to="/contact" variant="primary" size="lg" className="me-3 mb-3">
+                <Button as={Link} to="/contact" variant="outline-light" size="lg" className="me-3 mb-3">
                   Book a Session
                 </Button>
                 <Button as={Link} to="/services" variant="outline-light" size="lg" className="mb-3">
@@ -218,7 +218,7 @@ const Home = () => {
             subtitle="Hear from couples and individuals who have been impacted by our programs."
           />
           
-          <Row>
+          <Row className="align-items-stretch">
             {testimonials.map((testimonial, index) => (
               <Col lg={6} className="mb-4" key={index}>
                 <Testimonial
@@ -226,7 +226,7 @@ const Home = () => {
                   name={testimonial.name}
                   role={testimonial.role}
                   image={testimonial.image}
-                  rating={testimonial.rating}
+                  // rating={testimonial.rating}
                 />
               </Col>
             ))}
