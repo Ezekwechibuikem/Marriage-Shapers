@@ -51,11 +51,11 @@
     position: relative;
   }
   
-  .blog-author::before, .blog-read-time::before {
+  /* .blog-author::before, .blog-read-time::before {
     content: '\u2022';
     position: absolute;
     left: -10px;
-  }
+  } */
   
   .blog-title {
     font-size: 1.25rem;
@@ -88,12 +88,12 @@
     padding-right: 20px;
   }
   
-  .blog-read-more::after {
+  /* .blog-read-more::after {
     content: '\u2192';
     position: absolute;
     right: 0;
     transition: var(--transition-base);
-  }
+  } */
   
   .blog-read-more:hover::after {
     right: -5px;

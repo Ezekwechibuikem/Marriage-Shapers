@@ -28,12 +28,13 @@ const BlogCard = ({
         <div className="blog-meta">
           {date && <span className="blog-date">{date}</span>}
           {author && <span className="blog-author">By {author}</span>}
-          {readTime && <span className="blog-read-time">{readTime} min read</span>}
+          {readTime && <span className="blog-read-time">{readTime} mins read</span>}
         </div>
         <Card.Title className="blog-title">
           <Link to={`/blog/${id}`}>{title}</Link>
         </Card.Title>
         <Card.Text className="blog-excerpt">{excerpt}</Card.Text>
+        {/* <pre>{JSON.stringify({ id, title, excerpt })}</pre> */}
         <Link to={`/blog/${id}`} className="blog-read-more">
           Read More
         </Link>

@@ -62,13 +62,13 @@
     padding-left: 15px;
   }
   
-  .categories-list li:before {
+  /* .categories-list li:before {
     content: '\u203a';
     position: absolute;
     left: 0;
     color: var(--primary-color);
     transition: var(--transition-base);
-  }
+  } */
   
   .categories-list li:hover,
   .categories-list li.active {
