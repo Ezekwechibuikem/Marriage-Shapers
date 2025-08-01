@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -19,10 +18,11 @@ import BlogCard from '../../common/BlogCard';
 import EventCard from '../../common/EventCard';
 
 import './Home.css';
+import aboutImage from '../../../assets/images/MarriageShapers.jpg';
 
 // Placeholder images (in a real project, these would be imported from assets)
 const heroImage = 'https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80';
-const aboutImage = 'https://images.unsplash.com/photo-1529634667544-dc1ee6cb3e16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80';
+// import aboutImage from '../../../assets/images/MarriageShapers.jpg';
 const testimonialImage1 = 'https://randomuser.me/api/portraits/women/44.jpg';
 const testimonialImage2 = 'https://randomuser.me/api/portraits/men/32.jpg';
 const blogImage1 = 'https://images.unsplash.com/photo-1511405889574-b01de1da5441?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80';
