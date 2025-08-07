@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 import Hero from '../../common/Hero';
-import SectionTitle from '../../common/SectionTitle';
+//import SectionTitle from '../../common/SectionTitle';
 import BlogCard from '../../common/BlogCard';
 import blogImage2 from '../../../assets/images/blogs/blogimage2.jpg';
 

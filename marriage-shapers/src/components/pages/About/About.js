@@ -16,12 +16,12 @@ import './About.css';
 import founderImage from '../../../assets/images/CEO.jpg';
 
 // Placeholder images (in a real project, these would be imported from assets)
-const heroImage = 'https://images.unsplash.com/photo-1529634667544-dc1ee6cb3e16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80';
+const heroImage = 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80';
 //const founderImage = 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80';
-const teamImage1 = 'https://randomuser.me/api/portraits/men/32.jpg';
-const teamImage2 = 'https://randomuser.me/api/portraits/women/44.jpg';
-const teamImage3 = 'https://randomuser.me/api/portraits/men/52.jpg';
-const teamImage4 = 'https://randomuser.me/api/portraits/women/68.jpg';
+// const teamImage1 = 'https://randomuser.me/api/portraits/men/32.jpg';
+// const teamImage2 = 'https://randomuser.me/api/portraits/women/44.jpg';
+// const teamImage3 = 'https://randomuser.me/api/portraits/men/52.jpg';
+// const teamImage4 = 'https://randomuser.me/api/portraits/women/68.jpg';
 const testimonialImage = 'https://randomuser.me/api/portraits/women/33.jpg';
 
 const About = () => {

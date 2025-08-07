@@ -53,10 +53,10 @@ const ContactForm = ({
       };
 
       await emailjs.send(
-        'service_cz51282',     
-        'template_tgbs30p',    
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,     
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,    
         templateParams,
-        '-vGI1uZI1tvassNie'     
+        process.env.REACT_APP_EMAILJS_USER_ID   
       );
   
       
