@@ -3,9 +3,9 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
-  faHeart, 
-  faHandHoldingHeart, 
-  faUsers, 
+  //faHeart, 
+  //faHandHoldingHeart, 
+  //faUsers, 
   faBook, 
   faCalendarAlt 
 } from '@fortawesome/free-solid-svg-icons';
@@ -30,26 +30,26 @@ const eventImage = 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622
 
 const Home = () => {
   // Services data
-  const services = [
-    {
-      title: 'Premarital Counseling',
-      description: 'Prepare for a strong marriage foundation with our Christ-centered premarital counseling sessions.',
-      icon: faHeart,
-      link: '/services#premarital'
-    },
-    {
-      title: 'Marriage Counseling',
-      description: 'Strengthen your marriage with biblical principles and practical relationship tools.',
-      icon: faHandHoldingHeart,
-      link: '/services#marriage'
-    },
-    {
-      title: 'Relationship Workshops',
-      description: 'Interactive workshops designed to build healthy relationship skills for singles and couples.',
-      icon: faUsers,
-      link: '/services#workshops'
-    }
-  ];
+  // const services = [
+  //   {
+  //     title: 'Premarital Counseling',
+  //     description: 'Prepare for a strong marriage foundation with our Christ-centered premarital counseling sessions.',
+  //     icon: faHeart,
+  //     link: '/services#premarital'
+  //   },
+  //   {
+  //     title: 'Marriage Counseling',
+  //     description: 'Strengthen your marriage with biblical principles and practical relationship tools.',
+  //     icon: faHandHoldingHeart,
+  //     link: '/services#marriage'
+  //   },
+  //   {
+  //     title: 'Relationship Workshops',
+  //     description: 'Interactive workshops designed to build healthy relationship skills for singles and couples.',
+  //     icon: faUsers,
+  //     link: '/services#workshops'
+  //   }
+  // ];
   
   // Testimonials data
   const testimonials = [

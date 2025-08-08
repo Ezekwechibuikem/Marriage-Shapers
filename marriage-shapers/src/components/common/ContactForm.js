@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Form, Button, Alert, Spinner } from 'react-bootstrap';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import './ContactForm.css';
 
 const ContactForm = ({ 
@@ -44,9 +44,24 @@ const ContactForm = ({
       //   formData,
       //   'YOUR_USER_ID'
       // );
+      const templateParams = {
+        from_name: formData.name,
+        reply_to: formData.email,
+        phone: formData.phone,
+        subject: formData.subject,
+        message: formData.message,
+      };
+
+      await emailjs.send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,     
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,    
+        templateParams,
+        process.env.REACT_APP_EMAILJS_USER_ID   
+      );
+  
       
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      //await new Promise(resolve => setTimeout(resolve, 1500));
       
       setFormStatus({
         submitting: false,

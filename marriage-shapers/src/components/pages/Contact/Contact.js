@@ -9,9 +9,7 @@ import SectionTitle from '../../common/SectionTitle';
 import ContactForm from '../../common/ContactForm';
 
 import './Contact.css';
-
-// Placeholder image (in a real project, this would be imported from assets)
-const heroImage = 'https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1774&q=80';
+import heroImage from '../../../assets/images/contact/bgContactUs.avif';
 
 const Contact = () => {
   return (
@@ -81,11 +79,11 @@ const Contact = () => {
                   </div>
                   <Card.Title className="contact-title">Call Us</Card.Title>
                   <Card.Text className="contact-text">
-                    +1 (555) 123-4567<br />
-                    +1 (555) 987-6543
+                    +234 816 519 9373<br />
+                    +234 816 519 9373
                   </Card.Text>
                   <a 
-                    href="tel:+15551234567" 
+                    href="tel:+234 816 519 9373" 
                     className="contact-link"
                   >
                     Call Now

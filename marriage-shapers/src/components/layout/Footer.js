@@ -67,7 +67,7 @@ const Footer = () => {
             <ul className="footer-contact">
               <li>123 Faith Street, Christian City</li>
               <li>Email: info@marriageshapers.org</li>
-              <li>Phone: +1 (555) 123-4567</li>
+              <li>Phone: +234 816 519 9373</li>
               <li>Hours: Mon-Fri 9am - 5pm</li>
             </ul>
           </Col>

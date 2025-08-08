@@ -4,8 +4,8 @@ import { Container, Row, Col, Button, Form } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
   faCalendarAlt, 
-  faClock, 
-  faMapMarkerAlt,
+  //faClock, 
+  //faMapMarkerAlt,
   faFilter
 } from '@fortawesome/free-solid-svg-icons';
 
