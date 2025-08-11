@@ -105,11 +105,11 @@ const About = () => {
                 <h6 className="text-primary fw-bold">OUR STORY</h6>
                 <h2 className="story-title">Building Relationships on Biblical Principles</h2>
                 <p className="story-text">
-                  Marriage Shapers was founded in 2010 by Pastor David Wilson with a vision to strengthen 
+                  Marriage Shapers was founded in 2020 by Mrs Ibukunoluwa Olayiwola with a vision to strengthen 
                   marriages and relationships through biblical principles and practical guidance.
                 </p>
                 <p className="story-text">
-                  After witnessing many couples struggle in their marriages, Pastor David felt called to 
+                  After witnessing many couples struggle in their marriages, Mrs Ibukunoluwa Olayiwola felt called to 
                   create a ministry that would equip couples with the tools they need to build strong, 
                   lasting relationships based on God's design.
                 </p>
