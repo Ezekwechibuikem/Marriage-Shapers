@@ -45,7 +45,7 @@ const Services = () => {
         'Practical communication tools',
         'Conflict resolution strategies'
       ],
-      price: '$450 per couple'
+      price: '₦450 per couple'
     },
     {
       id: 'marriage',
@@ -60,7 +60,7 @@ const Services = () => {
         'Rebuilding trust and intimacy',
         'Spiritual guidance and prayer support'
       ],
-      price: '$120 per session'
+      price: '₦120 per session'
     },
     {
       id: 'workshops',
@@ -75,7 +75,7 @@ const Services = () => {
         'Community support and networking',
         'Biblical teaching and application'
       ],
-      price: '$75 per workshop'
+      price: '₦75 per workshop'
     },
     {
       id: 'retreats',
@@ -90,7 +90,7 @@ const Services = () => {
         'Spiritual renewal and connection',
         'Meals and accommodations included'
       ],
-      price: '$650 per couple'
+      price: '₦650 per couple'
     }
   ];
   

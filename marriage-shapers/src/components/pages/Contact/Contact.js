@@ -34,8 +34,8 @@ const Contact = () => {
                   </div>
                   <Card.Title className="contact-title">Our Location</Card.Title>
                   <Card.Text className="contact-text">
-                    123 Faith Street<br />
-                    Christian City, CA 90210
+                    Chevron drive,<br />
+                    eti Osa local government
                   </Card.Text>
                   <a 
                     href="https://maps.google.com" 
@@ -57,12 +57,12 @@ const Contact = () => {
                   </div>
                   <Card.Title className="contact-title">Email Us</Card.Title>
                   <Card.Text className="contact-text">
-                    bonaventex001@gmail.com<br />
-                    support@marriageshapers.org
+                    marriageshapers@gmail.com<br />
+                    marriageshapers@gmail.com
                   </Card.Text>
                   <a 
                     // href="mailto:bonaventex001@gmail.com" 
-                    href="mailto:bonaventex001@gmail.com?subject=Inquiry%20About%20Marriage%20Shapers&body=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20programs." 
+                    href="mailto:marriageshapers@gmail.com?subject=Inquiry%20About%20Marriage%20Shapers&body=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20programs." 
                     className="contact-link"
                   >
                     Send Email
@@ -79,11 +79,11 @@ const Contact = () => {
                   </div>
                   <Card.Title className="contact-title">Call Us</Card.Title>
                   <Card.Text className="contact-text">
-                    +234 816 519 9373<br />
-                    +234 816 519 9373
+                    +234 812 215 0640<br />
+                    +234 812 215 0640
                   </Card.Text>
                   <a 
-                    href="tel:+234 816 519 9373" 
+                    href="tel:+234 812 215 0640" 
                     className="contact-link"
                   >
                     Call Now
@@ -130,7 +130,7 @@ const Contact = () => {
                   </div>
                   <div className="hours-item">
                     <span className="day">Saturday:</span>
-                    <span className="time">10:00 AM - 1:00 PM</span>
+                    <span className="time">Closed</span>
                   </div>
                   <div className="hours-item">
                     <span className="day">Sunday:</span>
