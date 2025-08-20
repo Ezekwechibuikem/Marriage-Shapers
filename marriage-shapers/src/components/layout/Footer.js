@@ -65,9 +65,9 @@ const Footer = () => {
           <Col lg={3} md={6}>
             <h5 className="footer-heading">Contact Us</h5>
             <ul className="footer-contact">
-              <li>123 Faith Street, Christian City</li>
-              <li>Email: info@marriageshapers.org</li>
-              <li>Phone: +1 (555) 123-4567</li>
+              <li>Chevron drive, eti Osa local government</li>
+              <li>Email: marriageshapers@gmail.com</li>
+              <li>Phone: +234 812 215 0640</li>
               <li>Hours: Mon-Fri 9am - 5pm</li>
             </ul>
           </Col>

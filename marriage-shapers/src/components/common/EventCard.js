@@ -14,7 +14,10 @@ const EventCard = ({
   image, 
   registrationLink,
   isVirtual = false,
-  isFeatured = false
+  isFeatured = false,
+  price,
+  email 
+
 }) => {
   return (
     <Card className={`event-card ${isFeatured ? 'featured-event' : ''}`}>
@@ -56,7 +59,7 @@ const EventCard = ({
           >
             Register Now
           </Button>
-        )}
+        )} 
       </Card.Body>
     </Card>
   );

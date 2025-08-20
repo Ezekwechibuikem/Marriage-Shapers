@@ -13,44 +13,45 @@ import SectionTitle from '../../common/SectionTitle';
 import Testimonial from '../../common/Testimonial';
 
 import './About.css';
+import founderImage from '../../../assets/images/CEO.jpg';
 
 // Placeholder images (in a real project, these would be imported from assets)
-const heroImage = 'https://images.unsplash.com/photo-1529634667544-dc1ee6cb3e16?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80';
-const founderImage = 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80';
-const teamImage1 = 'https://randomuser.me/api/portraits/men/32.jpg';
-const teamImage2 = 'https://randomuser.me/api/portraits/women/44.jpg';
-const teamImage3 = 'https://randomuser.me/api/portraits/men/52.jpg';
-const teamImage4 = 'https://randomuser.me/api/portraits/women/68.jpg';
+const heroImage = 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80';
+//const founderImage = 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80';
+// const teamImage1 = 'https://randomuser.me/api/portraits/men/32.jpg';
+// const teamImage2 = 'https://randomuser.me/api/portraits/women/44.jpg';
+// const teamImage3 = 'https://randomuser.me/api/portraits/men/52.jpg';
+// const teamImage4 = 'https://randomuser.me/api/portraits/women/68.jpg';
 const testimonialImage = 'https://randomuser.me/api/portraits/women/33.jpg';
 
 const About = () => {
   // Team members data
-  const teamMembers = [
-    {
-      name: 'Pastor David Wilson',
-      role: 'Founder & Lead Counselor',
-      image: teamImage1,
-      bio: 'Pastor David has been counseling couples for over 15 years and has a passion for building Christ-centered marriages.'
-    },
-    {
-      name: 'Dr. Rebecca Smith',
-      role: 'Marriage Counselor',
-      image: teamImage2,
-      bio: 'Dr. Smith holds a Ph.D. in Family Therapy and specializes in helping couples navigate difficult transitions.'
-    },
-    {
-      name: 'Michael Johnson',
-      role: 'Premarital Counselor',
-      image: teamImage3,
-      bio: 'Michael focuses on preparing couples for marriage with a strong biblical foundation and practical tools.'
-    },
-    {
-      name: 'Sarah Thompson',
-      role: 'Singles Ministry Leader',
-      image: teamImage4,
-      bio: 'Sarah leads our singles ministry, helping individuals prepare for godly relationships and marriage.'
-    }
-  ];
+  // const teamMembers = [
+  //   {
+  //     name: 'Pastor David Wilson',
+  //     role: 'Founder & Lead Counselor',
+  //     image: teamImage1,
+  //     bio: 'Pastor David has been counseling couples for over 15 years and has a passion for building Christ-centered marriages.'
+  //   },
+  //   {
+  //     name: 'Dr. Rebecca Smith',
+  //     role: 'Marriage Counselor',
+  //     image: teamImage2,
+  //     bio: 'Dr. Smith holds a Ph.D. in Family Therapy and specializes in helping couples navigate difficult transitions.'
+  //   },
+  //   {
+  //     name: 'Michael Johnson',
+  //     role: 'Premarital Counselor',
+  //     image: teamImage3,
+  //     bio: 'Michael focuses on preparing couples for marriage with a strong biblical foundation and practical tools.'
+  //   },
+  //   {
+  //     name: 'Sarah Thompson',
+  //     role: 'Singles Ministry Leader',
+  //     image: teamImage4,
+  //     bio: 'Sarah leads our singles ministry, helping individuals prepare for godly relationships and marriage.'
+  //   }
+  // ];
   
   // Values data
   const values = [
@@ -104,11 +105,11 @@ const About = () => {
                 <h6 className="text-primary fw-bold">OUR STORY</h6>
                 <h2 className="story-title">Building Relationships on Biblical Principles</h2>
                 <p className="story-text">
-                  Marriage Shapers was founded in 2010 by Pastor David Wilson with a vision to strengthen 
+                  Marriage Shapers was founded in 2020 by Mrs Ibukunoluwa Olayiwola with a vision to strengthen 
                   marriages and relationships through biblical principles and practical guidance.
                 </p>
                 <p className="story-text">
-                  After witnessing many couples struggle in their marriages, Pastor David felt called to 
+                  After witnessing many couples struggle in their marriages, Mrs Ibukunoluwa Olayiwola felt called to 
                   create a ministry that would equip couples with the tools they need to build strong, 
                   lasting relationships based on God's design.
                 </p>
@@ -154,7 +155,7 @@ const About = () => {
       </section>
       
       {/* Our Team Section */}
-      <section className="section team-section">
+      {/* <section className="section team-section">
         <Container>
           <SectionTitle
             title="Meet Our Team"
@@ -178,7 +179,7 @@ const About = () => {
             ))}
           </Row>
         </Container>
-      </section>
+      </section> */}
       
       {/* Testimonial Section */}
       <section className="section testimonial-section bg-light">
