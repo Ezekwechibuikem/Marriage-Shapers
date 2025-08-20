@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Container, Row, Col, Button, Form } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -24,90 +23,112 @@ const eventImage4 = 'https://images.unsplash.com/photo-1494774157365-9e04c6720e4
 const eventImage5 = 'https://images.unsplash.com/photo-1494774157365-9e04c6720e47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80';
 
 const Events = () => {
-  // Events data
+  // Events data with pricing
   const allEvents = [
     {
       id: 'retreat',
+      eventId: 'event_retreat_001', // Unique eventId for payment
       title: 'Marriage Enrichment Weekend Retreat',
       description: 'A two-day retreat focused on deepening your connection and strengthening your marriage through biblical principles and practical exercises.',
       date: 'August 15-16, 2025',
       time: '9:00 AM - 5:00 PM',
       location: 'Grace Christian Center',
       image: eventImage1,
-      registrationLink: '/contact',
+      price: 2500000, // ₦25,000 in kobo (25000 * 100)
       isFeatured: true,
       category: 'Couples',
-      isVirtual: false
+      isVirtual: false,
+      isFree: false
     },
     {
       id: 'workshop',
+      eventId: 'event_workshop_001',
       title: 'Communication Workshop for Couples',
       description: 'Learn effective communication techniques based on biblical principles to improve understanding and resolve conflicts in your relationship.',
       date: 'July 25, 2025',
       time: '6:30 PM - 9:00 PM',
       location: 'Online via Zoom',
       image: eventImage2,
-      registrationLink: '/contact',
+      price: 500000, // ₦5,000 in kobo
       isFeatured: false,
       category: 'Couples',
-      isVirtual: true
+      isVirtual: true,
+      isFree: false
     },
     {
       id: 'singles',
+      eventId: 'event_singles_001',
       title: 'Singles Conference: Preparing for Marriage',
       description: 'A full-day conference for singles who desire to prepare for a Christ-centered marriage. Topics include biblical principles for relationships, finding the right partner, and personal growth.',
       date: 'August 5, 2025',
       time: '10:00 AM - 4:00 PM',
       location: 'Faith Community Church',
       image: eventImage3,
-      registrationLink: '/contact',
+      price: 0, // Free event
       isFeatured: false,
       category: 'Singles',
-      isVirtual: false
+      isVirtual: false,
+      isFree: true
     },
     {
       id: 'webinar',
+      eventId: 'event_webinar_001',
       title: 'Financial Harmony in Marriage Webinar',
       description: 'Join us for this interactive webinar on managing finances as a couple using biblical principles. Learn practical tools for budgeting, saving, and avoiding financial conflicts.',
       date: 'August 12, 2025',
       time: '7:00 PM - 8:30 PM',
       location: 'Online via Zoom',
       image: eventImage4,
-      registrationLink: '/contact',
+      price: 300000, // ₦3,000 in kobo
       isFeatured: false,
       category: 'Couples',
-      isVirtual: true
+      isVirtual: true,
+      isFree: false
     },
     {
       id: 'premarital',
+      eventId: 'event_premarital_001',
       title: 'Premarital Counseling Group Session',
       description: 'A six-week program for engaged couples to build a strong foundation for their marriage based on biblical principles and practical relationship skills.',
       date: 'Starting September 7, 2025',
       time: '7:00 PM - 8:30 PM (Tuesdays)',
       location: 'Marriage Shapers Office',
       image: eventImage5,
-      registrationLink: '/contact',
+      price: 1500000, // ₦15,000 in kobo
       isFeatured: false,
       category: 'Engaged',
-      isVirtual: false
+      isVirtual: false,
+      isFree: false
     }
   ];
   
   // Filter options
   const categories = ['All', 'Couples', 'Singles', 'Engaged'];
   const formats = ['All Formats', 'In-Person', 'Virtual'];
+  const priceRanges = ['All Prices', 'Free', 'Under ₦10,000', '₦10,000+'];
   
   // State for filtering
   const [activeCategory, setActiveCategory] = useState('All');
   const [activeFormat, setActiveFormat] = useState('All Formats');
+  const [activePriceRange, setActivePriceRange] = useState('All Prices');
   
-  // Filter events based on category and format
+  // Filter events based on category, format, and price
   const filteredEvents = allEvents.filter(event => {
     const matchesCategory = activeCategory === 'All' || event.category === activeCategory;
     const matchesFormat = activeFormat === 'All Formats' || 
                          (activeFormat === 'Virtual' && event.isVirtual) ||
                          (activeFormat === 'In-Person' && !event.isVirtual);
-    return matchesCategory && matchesFormat;
+    
+    let matchesPrice = true;
+    if (activePriceRange === 'Free') {
+      matchesPrice = event.isFree || event.price === 0;
+    } else if (activePriceRange === 'Under ₦10,000') {
+      matchesPrice = event.price > 0 && event.price < 1000000; // Under ₦10,000
+    } else if (activePriceRange === '₦10,000+') {
+      matchesPrice = event.price >= 1000000; // ₦10,000 and above
+    }
+    
+    return matchesCategory && matchesFormat && matchesPrice;
   });
   
   // Featured events
@@ -121,6 +142,11 @@ const Events = () => {
   // Handle format change
   const handleFormatChange = (e) => {
     setActiveFormat(e.target.value);
+  };
+
+  // Handle price range change
+  const handlePriceRangeChange = (e) => {
+    setActivePriceRange(e.target.value);
   };
   
   return (
@@ -146,15 +172,17 @@ const Events = () => {
               {featuredEvents.map(event => (
                 <Col lg={12} key={event.id}>
                   <EventCard
+                    eventId={event.eventId}
                     title={event.title}
                     description={event.description}
                     date={event.date}
                     time={event.time}
                     location={event.location}
                     image={event.image}
-                    registrationLink={event.registrationLink}
+                    price={event.price}
                     isVirtual={event.isVirtual}
                     isFeatured={event.isFeatured}
+                    isFree={event.isFree}
                   />
                 </Col>
               ))}
@@ -174,21 +202,24 @@ const Events = () => {
           {/* Filters */}
           <div className="events-filters mb-4">
             <Row>
-              <Col lg={6} className="mb-3 mb-lg-0">
+              <Col lg={4} className="mb-3 mb-lg-0">
                 <div className="category-filters">
-                  {categories.map((category, index) => (
-                    <Button
-                      key={index}
-                      variant={activeCategory === category ? 'primary' : 'outline-primary'}
-                      className="category-filter-btn me-2 mb-2"
-                      onClick={() => handleCategoryChange(category)}
-                    >
-                      {category}
-                    </Button>
-                  ))}
+                  <label className="filter-label">Category:</label>
+                  <div className="filter-buttons">
+                    {categories.map((category, index) => (
+                      <Button
+                        key={index}
+                        variant={activeCategory === category ? 'primary' : 'outline-primary'}
+                        className="category-filter-btn me-2 mb-2"
+                        onClick={() => handleCategoryChange(category)}
+                      >
+                        {category}
+                      </Button>
+                    ))}
+                  </div>
                 </div>
               </Col>
-              <Col lg={6}>
+              <Col lg={4} className="mb-3 mb-lg-0">
                 <div className="format-filter">
                   <Form.Group className="d-flex align-items-center">
                     <FontAwesomeIcon icon={faFilter} className="me-2 text-primary" />
@@ -205,6 +236,22 @@ const Events = () => {
                   </Form.Group>
                 </div>
               </Col>
+              <Col lg={4}>
+                <div className="price-filter">
+                  <Form.Group className="d-flex align-items-center">
+                    <Form.Label className="mb-0 me-3">Price:</Form.Label>
+                    <Form.Select 
+                      value={activePriceRange}
+                      onChange={handlePriceRangeChange}
+                      className="price-select"
+                    >
+                      {priceRanges.map((range, index) => (
+                        <option key={index} value={range}>{range}</option>
+                      ))}
+                    </Form.Select>
+                  </Form.Group>
+                </div>
+              </Col>
             </Row>
           </div>
           
@@ -214,14 +261,16 @@ const Events = () => {
               {filteredEvents.map(event => (
                 <Col lg={6} key={event.id}>
                   <EventCard
+                    eventId={event.eventId}
                     title={event.title}
                     description={event.description}
                     date={event.date}
                     time={event.time}
                     location={event.location}
                     image={event.image}
-                    registrationLink={event.registrationLink}
+                    price={event.price}
                     isVirtual={event.isVirtual}
+                    isFree={event.isFree}
                   />
                 </Col>
               ))}
